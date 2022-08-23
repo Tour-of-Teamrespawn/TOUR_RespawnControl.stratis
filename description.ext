@@ -1,0 +1,63 @@
+class Header
+{
+	gameType = Coop;
+	minPlayers = 1;
+	maxPlayers = 30; 
+};
+
+author = "Mr.Ben";
+onLoadName = "[Tour] Respawn Control";
+briefingName = "[Tour] Respawn Control";
+onLoadMission = "Example Mission";
+onLoadMissionTime = true;
+enableItemsDropping = 0;
+disabledAI = false; 
+enableDebugConsole = 1;
+
+///////////////////////////////////////////////////////////////////////////
+
+ // RC CODE HERE //
+
+respawn = 3;
+respawnDelay = 30;
+respawnDialog = 1;
+respawnTemplates[] = {"Tickets"};
+respawnVehicleDelay = 30;
+
+#include "scripts\TOUR_RC\dialog\hpp\admintool.hpp"
+
+///////////////////////////////////////////////////////////////////////////
+
+class Params
+{
+	class TOUR_param_Respawn
+	{
+		//paramsArray[0]
+		title = "Respawn Time (s):";
+		values[] = {0, 30, 60, 300, 600, 900};
+		default = 30;
+		texts[] = {"None", "30 Seconds", "1 Minute", "5 Minutes", "10 Minutes", "15 Minutes"};
+	};
+	
+	class TOUR_param_tickets
+	{
+		//paramsArray[1]
+		title = "Lives:";
+		values[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 20, 30, 40, 50, 100};
+		default = 1;
+		texts[] = {"1", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "20", "30", "40", "50", "100"};
+	};
+};
+
+class CfgDebriefing
+{  
+	class kia
+	{
+		title = "Killed In Action";
+		subtitle = "KIA";
+		description = "All teammates were killed in action.";
+		pictureBackground = "";
+		picture = "o_inf";
+		pictureColor[] = { 0.6,0.1,0.2,1 };
+	};
+};
