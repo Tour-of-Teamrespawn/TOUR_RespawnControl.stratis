@@ -17,14 +17,9 @@ enableDebugConsole = 1;
 ///////////////////////////////////////////////////////////////////////////
 
  // RC CODE HERE //
+ // NOTE: You do not need to add any BIS parameters for respawn in the description.ext - this is taken care of in respawn control
 
-respawn = 3;
-respawnDelay = 30;
-respawnDialog = 1;
-respawnTemplates[] = {"Tickets"};
-respawnVehicleDelay = 30;
-
-#include "scripts\TOUR_RC\dialog\hpp\admintool.hpp"
+#include "scripts\TOUR_RC\dialog\hpp\config.hpp"
 
 ///////////////////////////////////////////////////////////////////////////
 
