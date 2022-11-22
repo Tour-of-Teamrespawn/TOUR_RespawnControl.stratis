@@ -4,7 +4,7 @@ Made by Mr.Ben
 
 Tour of Teamrespawn 
 
-Version 11
+Version 12
 
 Implement the TOUR_RC folder into your mission. Execute the init file as shown in the example mission params.sqf.
 See description.ext for code to add for the setup of the mission. 
